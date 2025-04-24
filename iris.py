@@ -29,11 +29,11 @@ if st.sidebar.button('Predict'):
     st.write(iris_df)
 
     # 予測の実行
-    response = requests.post('http://localhost:8000/predict', json=iris)
+    response = requests.post('https://iris-streamlit-5jcn.onrender.com/predict', json=iris)
     prediction = response.json()['prediction']
     
     # 予測結果を表示
-    st.write('## Prediction')
+    st.write('## Prediction from Render')
     st.write(prediction)
 
     # 予測結果の出力
